@@ -1,0 +1,14 @@
+---
+- name: Install Tree Package
+  hosts: localhost
+  become: yes  # Run tasks with elevated privileges (sudo)
+
+  tasks:
+    - name: Update APT package cache
+      apt:
+        update_cache: yes
+
+    - name: Install Tree Package
+      apt:
+        name: tree
+        state: present

@@ -1,0 +1,10 @@
+---
+- name: Create File
+  hosts: localhost
+  gather_facts: yes
+  connection: local
+  tasks:
+    - name: Create a file named 73772114183.txt
+      file:
+        path: /home/osboxes/Desktop/73772114183.txt
+        state: touch
